@@ -11,6 +11,7 @@ export default function App() {
         are constantly venturing out into the cosmos to uncover its secrets and
         push the boundaries of what's possible.
       </TextExpander>
+
       <TextExpander
         collapsedNumWords={20}
         expandButtonText="Show text"
@@ -23,6 +24,7 @@ export default function App() {
         results are out of this world. Think about the first time humans stepped
         foot on the moon or when rovers were sent to roam around on Mars.
       </TextExpander>
+
       <TextExpander expanded={true} className="box">
         Space missions have given us incredible insights into our universe and
         have inspired future generations to keep reaching for the stars. Space
@@ -43,6 +45,7 @@ function TextExpander({
   children,
 }) {
   const [isExpanded, setIsExpanded] = useState(expanded);
+
   const displayText = isExpanded
     ? children
     : children.split(" ").slice(0, collapsedNumWords).join(" ") + "...";
@@ -55,6 +58,7 @@ function TextExpander({
     marginLeft: "6px",
     color: buttonColor,
   };
+
   return (
     <div className={className}>
       <span>{displayText}</span>
