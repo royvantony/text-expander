@@ -16,6 +16,7 @@ export default function App() {
         expandButtonText="Show text"
         collapseButtonText="Collapse text"
         buttonColor="#ff6622"
+        className="box"
       >
         Space travel requires some seriously amazing technology and
         collaboration between countries, private companies, and international
